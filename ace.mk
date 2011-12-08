@@ -170,14 +170,6 @@ LOCAL_KERNEL := device/htc/ace/kernel/kernel
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
-# stuff common to all HTC phones
-#$(call inherit-product, device/htc/common/common.mk)
-
-$(call inherit-product, build/target/product/full_base.mk)
-
-# common msm7x30 configs
-#$(call inherit-product, device/htc/msm7x30-common/msm7x30.mk)
-
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
 
@@ -195,6 +187,9 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
     frameworks/base/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
+# common msm7x30 configs
+$(call inherit-product, device/htc/msm7x30-common/msm7x30.mk)
+
 # media profiles and capabilities spec
 #$(call inherit-product, device/htc/ace/media_a1026.mk)
 
@@ -202,7 +197,7 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, device/htc/ace/media_htcaudio.mk)
 
 # stuff common to all HTC phones
-$(call inherit-product, device/htc/common/common.mk)
+#$(call inherit-product, device/htc/common/common.mk)
 
 $(call inherit-product, build/target/product/full_base.mk)
 
