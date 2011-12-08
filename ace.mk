@@ -174,7 +174,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 # use high-density artwork where available
-# PRODUCT_LOCALES += hdpi
+PRODUCT_LOCALES += hdpi
 PRODUCT_LOCALES += en
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
