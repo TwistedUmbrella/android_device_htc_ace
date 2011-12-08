@@ -25,8 +25,8 @@
 # against the traditional rules of inheritance).
 # USE_CAMERA_STUB := true
 
-# inherit from common msm7x30
--include device/htc/ace/BoardConfigCommon.mk
+# inherit from common msm7x30 device
+-include device/htc/msm7x30-common/BoardConfigCommon.mk
 
 # inherit from the proprietary version
 -include vendor/htc/ace/BoardConfigVendor.mk
