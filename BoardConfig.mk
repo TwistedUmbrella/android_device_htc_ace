@@ -59,8 +59,6 @@ BOARD_OVERLAY_MINIFICATION_LIMIT := 2
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := spade
 BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 1240
 
-# BOARD_USE_QCOM_PMEM := true
-
 # cat /proc/emmc
 #dev:        size     erasesize name
 #mmcblk0p17: 00040000 00000200 "misc"
