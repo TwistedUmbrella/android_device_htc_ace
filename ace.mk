@@ -58,7 +58,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     lights.spade \
     sensors.spade \
-    gps.spade
+    audio.a2dp.default \
+    audio.primary.msm7x30 \
+    gps.spade \
+    libaudioutils \
+    libtinyalsa
 
 # Keylayouts
 PRODUCT_COPY_FILES += \
