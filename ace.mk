@@ -14,8 +14,6 @@
 # limitations under the License.
 #
 
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-
 # The gps config appropriate for this device
 ## (1) First, the most specific values, i.e. the aspects that are specific to GSM
 
@@ -25,7 +23,7 @@ PRODUCT_COPY_FILES += \
 
 ## (2) Also get non-open-source GSM-specific aspects if available
 $(call inherit-product-if-exists, vendor/htc/ace/ace-vendor.mk)
-$(call inherit-product-if-exists, vendor/google/google-vendor.mk)
+$(call inherit-product-if-exists, vendor/twisted/twisted-vendor.mk)
 
 ## (3)  Finally, the least specific parts, i.e. the non-GSM-specific aspects
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -166,13 +164,17 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/ace/vold.fstab:system/etc/vold.fstab
 
-PRODUCT_COPY_FILES += \
-    device/htc/ace/kernel/modules/bcm4329.ko:system/lib/modules/bcm4329.ko
-
-LOCAL_KERNEL := device/htc/ace/kernel/kernel
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+	LOCAL_KERNEL := device/htc/ace/kernel/kernel
+else
+	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+endif
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
+
+PRODUCT_COPY_FILES += \
+    device/htc/ace/kernel/lib/modules/bcm4329.ko:system/lib/modules/bcm4329.ko
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
@@ -181,30 +183,22 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 # PRODUCT_LOCALES += hdpi
 PRODUCT_LOCALES += en
 
-PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-
-PRODUCT_COPY_FILES += \
-    frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
-    frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
-    frameworks/base/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
-    frameworks/base/data/etc/android.hardware.touchscreen.multitouch.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.xml \
-    frameworks/base/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
-    frameworks/base/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
-
 # common msm7x30 configs
 $(call inherit-product, device/htc/msm7x30-common/msm7x30.mk)
 
 # media profiles and capabilities spec
-#$(call inherit-product, device/htc/ace/media_a1026.mk)
+$(call inherit-product, device/htc/ace/media_a1026.mk)
 
 # htc audio settings
-$(call inherit-product, device/htc/ace/media_htcaudio.mk)
+# $(call inherit-product, device/htc/ace/media_htcaudio.mk)
 
 # stuff common to all HTC phones
 #$(call inherit-product, device/htc/common/common.mk)
 
 $(call inherit-product, build/target/product/full_base.mk)
 
+PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
+PRODUCT_BRAND := HTC
 PRODUCT_NAME := htc_ace
 PRODUCT_DEVICE := ace
 PRODUCT_MODEL := HTC Desire HD
