@@ -14,11 +14,11 @@
 # limitations under the License.
 #
 
-# The gps config appropriate for this device
 ## (1) First, the most specific values, i.e. the aspects that are specific to GSM
 
 PRODUCT_COPY_FILES += \
     device/htc/ace/kernel/init.spade.rc:root/init.spade.rc \
+    device/htc/ace/kernel/init.spade.usb.rc:root/init.spade.usb.rc \
     device/htc/ace/kernel/ueventd.spade.rc:root/ueventd.spade.rc
 
 ## (2) Also get non-open-source GSM-specific aspects if available
@@ -39,26 +39,22 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vold.umsdirtyratio=20
 
-# Disable visual strict mode, even on eng builds
-PRODUCT_DEFAULT_PROPERTY += \
-persist.sys.strictmode.visual=0
-
 DEVICE_PACKAGE_OVERLAYS += device/htc/ace/overlay
 
+# Devie XML Permissions
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
 
-# gsm config xml file
+# Device XML Properties
 PRODUCT_COPY_FILES += \
-    device/htc/ace/voicemail-conf.xml:system/etc/voicemail-conf.xml \
-    device/htc/ace/apns-conf.xml:system/etc/apns-conf.xml
+    device/htc/ace/voicemail-conf.xml:system/etc/voicemail-conf.xml
 
 PRODUCT_PACKAGES += \
     lights.spade \
     sensors.spade \
     gps.spade
 
-# Keylayouts
+# Keylayouts and Touchscreen
 PRODUCT_COPY_FILES += \
     device/htc/ace/idc/synaptics-rmi-touchscreen.idc:/system/usr/idc/synaptics-rmi-touchscreen.idc \
     device/htc/ace/idc/synaptics-rmi-touchscreen.idc:/system/usr/idc/atmel-touchscreen.idc \
@@ -121,6 +117,7 @@ PRODUCT_COPY_FILES += \
     device/htc/ace/dsp/soundimage/Sound_SRS_V_SPK.txt:system/etc/soundimage/Sound_SRS_V_SPK.txt \
     device/htc/ace/dsp/soundimage/Sound_Treble_Booster.txt:system/etc/soundimage/Sound_Treble_Booster.txt \
     device/htc/ace/dsp/soundimage/Sound_Vocal_Booster.txt:system/etc/soundimage/Sound_Vocal_Booster.txt
+#    device/htc/ace/dsp/audio_effects.conf:/system/etc/audio_effects.conf
 
 # Additional NAM Audio DSP Profiles to NAM Package
 PRODUCT_COPY_FILES += \
@@ -157,6 +154,13 @@ PRODUCT_COPY_FILES += \
     device/htc/ace/nam/Sound_Classical_MCLK.txt:system/etc/nam/Sound_Classical_MCLK.txt \
     device/htc/ace/nam/Sound_Country_MCLK.txt:system/etc/nam/Sound_Country_MCLK.txt
 
+# we have enough storage space to hold precise GC data
+PRODUCT_TAGS += dalvik.gc.type-precise
+
+# mecha uses high-density artwork where available
+# PRODUCT_LOCALES += hdpi
+PRODUCT_LOCALES += en
+
 PRODUCT_COPY_FILES += \
     device/htc/ace/vold.fstab:system/etc/vold.fstab
 
@@ -169,32 +173,30 @@ endif
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
+# Kernel Modules
 PRODUCT_COPY_FILES += \
-    device/htc/ace/kernel/lib/modules/bcm4329.ko:system/lib/modules/bcm4329.ko
+   device/htc/ace/kernel/lib/modules/bcm4329.ko:system/lib/modules/bcm4329.ko
 
-# we have enough storage space to hold precise GC data
-PRODUCT_TAGS += dalvik.gc.type-precise
-
-# use high-density artwork where available
-# PRODUCT_LOCALES += hdpi
-PRODUCT_LOCALES += en
+# Script for telling ICS boot is complete - needed for init.d support
+PRODUCT_COPY_FILES += \
+    device/htc/ace/kernel/etc/init.d/100complete:system/etc/init.d/100complete
 
 # common msm7x30 configs
 $(call inherit-product, device/htc/msm7x30-common/msm7x30.mk)
 
-# htc audio settings
-$(call inherit-product, device/htc/ace/media_htcaudio.mk)
+# media profiles and capabilities spec
+$(call inherit-product, device/htc/ace/media_a1026.mk)
 
 # stuff common to all HTC phones
-#$(call inherit-product, device/htc/common/common.mk)
+$(call inherit-product, device/htc/common/common.mk)
 
 $(call inherit-product, build/target/product/full_base.mk)
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-PRODUCT_BRAND := HTC
 PRODUCT_NAME := htc_ace
 PRODUCT_DEVICE := ace
-# PRODUCT_MODEL := HTC Desire HD
-PRODUCT_MODEL := Desire HD
+PRODUCT_MODEL := HTC Desire HD
 PRODUCT_MANUFACTURER := HTC
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=htc_ace BUILD_ID=GRJ22 BUILD_DISPLAY_ID=GRJ90 BUILD_FINGERPRINT=HTC/htc_ace/ace:2.3.4/GRJ22/120826.3:user/release-keys PRIVATE_BUILD_DESC="4.08.605.3 CL120826 release-keys"
+
+PRODUCT_PROPERTY_OVERRIDES += \
+ ro.telephony.ril.v3=signalstrength

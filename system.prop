@@ -1,7 +1,7 @@
 #
 # system.prop for ace
 #
-ro.sf.lcd_density=192
+ro.sf.lcd_density=240
 
 debug.fb.rgb565=0
 
@@ -33,7 +33,7 @@ ro.ril.hsxpa=2
 ro.telephony.default_network=0
 
 wifi.interface=eth0
-wifi.supplicant_scan_interval=15
+wifi.supplicant_scan_interval=100
 
 mobiledata.interfaces=gannet0,rmnet0,rmnet1,rmnet2
 
@@ -42,7 +42,7 @@ mobiledata.interfaces=gannet0,rmnet0,rmnet1,rmnet2
 ro.opengles.version=131072
 
 # This is a high density device with more memory, so larger vm heaps for it.
-dalvik.vm.heapsize=48m
+dalvik.vm.heapsize=64m
 
 # For the default value of agps
 ro.ril.def.agps.mode=2
@@ -55,3 +55,6 @@ ro.ril.update.org.acoustic=1
 
 # Define TCP buffer sizes
 net.tcp.buffersize.hsdpa=4094,87380,393216,4096,16384,110208
+
+#For USB mount
+persist.sys.usb.config=mass_storage,adb
