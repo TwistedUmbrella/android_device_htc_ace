@@ -1,6 +1,14 @@
+# This defines the max event window manager can
+# handle in 1 s. We may adjust this # for performance
+# reason later
+windowsmgr.max_events_per_sec=275
+ro.config.disable_hw_accel=false
+
+# end build properties
 #
 # system.prop for ace
 #
+
 ro.sf.lcd_density=240
 
 debug.fb.rgb565=0
