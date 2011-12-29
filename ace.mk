@@ -66,6 +66,14 @@ PRODUCT_COPY_FILES += \
     device/htc/ace/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
     device/htc/ace/keylayout/spade-keypad.kl:system/usr/keylayout/spade-keypad.kl
 
+# Firmware
+PRODUCT_COPY_FILES += \
+    device/htc/ace/firmware/bcm4329.hcd:system/etc/firmware/bcm4329.hcd \
+    device/htc/ace/firmware/fw_bcm4329.bin:system/etc/firmware/fw_bcm4329.bin \
+    device/htc/ace/firmware/fw_bcm4329_apsta.bin:system/etc/firmware/fw_bcm4329_apsta.bin \
+    device/htc/ace/firmware/default.acdb:system/etc/firmware/default.acdb \
+    device/htc/ace/firmware/default_org.acdb:system/etc/firmware/default_org.acdb
+
 # Audio DSP Profiles
 PRODUCT_COPY_FILES += \
     device/htc/ace/dsp/AIC3254_REG.csv:system/etc/AIC3254_REG.csv \
