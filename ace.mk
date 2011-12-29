@@ -123,9 +123,10 @@ PRODUCT_COPY_FILES += \
 
 # Kernel Modules
 PRODUCT_COPY_FILES += \
+   device/htc/ace/kernel/lib/modules/qc_pcm_in.ko:system/lib/modules/qc_pcm_in.ko \
    device/htc/ace/kernel/lib/modules/bcm4329.ko:system/lib/modules/bcm4329.ko
 
-# Script for telling ICS boot is complete - needed for init.d support
+# Script to signal boot completion for init.d
 PRODUCT_COPY_FILES += \
     device/htc/ace/kernel/etc/init.d/100complete:system/etc/init.d/100complete
 
