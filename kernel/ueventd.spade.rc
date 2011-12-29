@@ -23,3 +23,11 @@
 
 /dev/kgsl-2d0           0666    root        root
 /dev/kgsl-3d0           0666    root        root
+
+#genlock
+/dev/genlock            0666    root        root
+
+#bluetooth
+/dev/ttyHS0             0600    bluetooth   bluetooth
+/dev/ttyMSM0            0600    bluetooth   bluetooth
+/dev/uinput             0660    system      bluetooth
