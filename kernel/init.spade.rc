@@ -1,9 +1,5 @@
-on boot
-    mount debugfs /sys/kernel/debug /sys/kernel/debug
+on early-fs
 
-import init.spade.usb.rc
-
-on fs
     mkdir /system
     mkdir /data 0771 system system
     mkdir /cache 0770 system cache
@@ -13,6 +9,10 @@ on fs
     mount ext4 /dev/block/mmcblk0p27 /cache wait noatime nosuid nodev barrier=1
     mount ext4 /dev/block/mmcblk0p28 /devlog wait noatime nosuid nodev barrier=1
 
+import init.spade.usb.rc
+
+on boot
+    mkdir /data/radio 0770 radio radio
     mkdir /data/misc 1771 system misc
     mkdir /data/misc/bluetoothd 0770 bluetooth bluetooth
     mkdir /data/misc/keystore 0700 keystore keystore
@@ -22,13 +22,13 @@ on fs
     mkdir /data/misc/wifi/sockets 0770 wifi wifi
     mkdir /data/misc/dhcp 0770 dhcp dhcp
     chown dhcp dhcp /data/misc/dhcp
-    mkdir /data/d 0777 system system
-    mount debugfs /data/d /data/d
 
     chown system system /sys/module/serial/parameters/modem_enabled
     chown system system /dev/ttyHSUSB0
     chown system system /dev/ttySA0
     chown system system /dev/smd9
+
+    mount debugfs /sys/kernel/debug /sys/kernel/debug
 
     # SysFS bluetooth interface
     chown bluetooth bluetooth /dev/ttyHS0
@@ -109,14 +109,12 @@ service akmd /system/bin/akmd
 
 # bugreport is triggered by the KEY_VOLUMEUP and BTN_MOUSE keycodes
 service bugreport /system/bin/dumpstate -d -v -o /sdcard/bugreports/bugreport
-    class main
     disabled
     oneshot
     keycodes 114 115
 
 service hciattach /system/bin/brcm_patchram_plus --enable_hci --enable_lpm \
     --baudrate 3000000 --patchram /etc/firmware/bcm4329.hcd /dev/ttyHS0
-    class main
     user bluetooth
     group bluetooth net_bt_admin
     disabled
@@ -139,12 +137,12 @@ service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p13 /dev/block/mmc
 
 service htc_ebdlogd /system/bin/htc_ebdlogd -s -k -P 7
     user root
-        disabled
+    disabled
     oneshot
 
 service htc_ebdlogd_rel /system/bin/htc_ebdlogd -s -k
     user root
-        disabled
+    disabled
     oneshot
 
 on property:ro.build.tags=test-keys
