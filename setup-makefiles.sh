@@ -95,6 +95,8 @@ mkdir -p ../../../vendor/htc/$DEVICE/overlay/packages/apps/Launcher2/res/layout
 
 <!-- switch to all_apps_3d on devices that support RenderScript -->
 <merge xmlns:android="http://schemas.android.com/apk/res/android">
-    <include layout="@layout/all_apps_3d" />
+<!-- This feature is currently unsupported by Android 4.0 ICS
+<include layout="@layout/all_apps_3d" />
+Please remove the surrounding comments to enable this feature-->
 </merge>
 EOF
