@@ -20,7 +20,7 @@ debug.sf.hw=1
 debug.composition.type=dyn
 ro.sf.compbypass.enable=1
 com.qc.hardware=true
-debug.enabletr=true
+debug.enabletr=false
 com.qc.hdmi_out=false
 
 # Modify MMS APN retry timer from 5s to 2s.
