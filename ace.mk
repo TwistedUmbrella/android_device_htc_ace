@@ -48,7 +48,8 @@ PRODUCT_COPY_FILES += \
 # Device XML Properties
 PRODUCT_COPY_FILES += \
     device/htc/ace/system/etc/voicemail-conf.xml:system/etc/voicemail-conf.xml \
-    device/htc/ace/system/etc/apns-conf.xml:system/etc/apns-conf.xml
+    device/htc/ace/system/etc/apns-conf.xml:system/etc/apns-conf.xml \
+    device/htc/ace/system/etc/gps.conf:system/etc/gps.conf
 
 PRODUCT_PACKAGES += \
     lights.spade \
