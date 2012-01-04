@@ -176,7 +176,7 @@ PRODUCT_COPY_FILES += \
 
 # Script to signal boot completion for init.d
 PRODUCT_COPY_FILES += \
-    device/htc/ace/kernel/etc/init.d/01vdd_levels:system/etc/init.d/01vdd_levels
+    device/htc/ace/kernel/etc/init.d/100complete:system/etc/init.d/100complete
 
 # common msm7x30 configs
 $(call inherit-product, device/htc/msm7x30-common/msm7x30.mk)
