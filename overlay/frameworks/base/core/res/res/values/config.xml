@@ -193,8 +193,5 @@ This section commented to provide reference only -->
     <!-- Component name of the default wallpaper. This will be ImageWallpaper if not 
          specified -->
     <string name="default_wallpaper_component">com.android.wallpaper/.nexus.NexusWallpaper</string>
-    
-    <!-- Use legacy USB device manager. -->
-    <bool name="config_usesLegacyUsbDeviceManager">true</bool>
 
 </resources>
