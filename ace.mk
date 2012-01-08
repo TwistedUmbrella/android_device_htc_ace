@@ -193,6 +193,3 @@ PRODUCT_NAME := htc_ace
 PRODUCT_DEVICE := ace
 PRODUCT_MODEL := HTC Desire HD
 PRODUCT_MANUFACTURER := HTC
-
-PRODUCT_PROPERTY_OVERRIDES += \
- ro.telephony.ril.v3=signalstrength
