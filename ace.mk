@@ -18,7 +18,6 @@
 
 PRODUCT_COPY_FILES += \
     device/htc/ace/kernel/init.spade.rc:root/init.spade.rc \
-    device/htc/ace/kernel/init.spade.usb.rc:root/init.spade.usb.rc \
     device/htc/ace/kernel/ueventd.spade.rc:root/ueventd.spade.rc
 
 ## (2) Also get non-open-source GSM-specific aspects if available

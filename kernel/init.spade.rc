@@ -9,7 +9,7 @@ on early-fs
     mount ext4 /dev/block/mmcblk0p27 /cache wait noatime nosuid nodev barrier=1
     mount ext4 /dev/block/mmcblk0p28 /devlog wait noatime nosuid nodev barrier=1
 
-import init.spade.usb.rc
+import init.msm7x30.usb.rc
 
 on boot
     mkdir /data/radio 0770 radio radio
