@@ -38,6 +38,18 @@ BOARD_KERNEL_RECOVERY_CMDLINE := $(BOARD_KERNEL_CMDLINE) msmsdcc_power_gpio=88
 BOARD_KERNEL_BASE := 0x4000000
 BOARD_KERNEL_PAGE_SIZE := 4096
 
+TARGET_CAMERA_WRAPPER := nexus
+ifneq ($(TARGET_CAMERA_WRAPPER),)
+PRODUCT_COPY_FILES += \
+    device/htc/ace/proprietary/libcamera-$(TARGET_CAMERA_WRAPPER).so:obj/lib/libcamera-$(TARGET_CAMERA_WRAPPER).so \
+    device/htc/ace/proprietary/libcamera-$(TARGET_CAMERA_WRAPPER).so:obj/lib/libcamera.so \
+    device/htc/ace/proprietary/libcamera-$(TARGET_CAMERA_WRAPPER).so:/system/lib/libcamera.so
+else
+PRODUCT_COPY_FILES += \
+    vendor/htc/ace/proprietary/libcamera.so:obj/lib/libcamera.so \
+    vendor/htc/ace/proprietary/libcamera.so:/system/lib/libcamera.so
+endif
+
 # Workaround for ace broken overlay scaling
 BOARD_OVERLAY_MINIFICATION_LIMIT := 2
 
