@@ -47,7 +47,7 @@ ro.ril.enable.dtm=0
 ro.ril.gprsclass=12
 ro.ril.hsdpa.category=10
 ro.ril.hsupa.category=6
-ro.ril.hsxpa=2
+ro.ril.hsxpa=3
 
 # Default network type.
 # 0 => WCDMA preferred.
@@ -64,6 +64,7 @@ ro.opengles.version=131072
 
 # This is a high density device with more memory, so larger vm heaps for it.
 dalvik.vm.heapsize=64m
+dalvik.vm.heapgrowthlimit=32m
 
 # For the default value of agps
 ro.ril.def.agps.mode=2
