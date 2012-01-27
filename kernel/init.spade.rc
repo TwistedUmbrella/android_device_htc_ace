@@ -4,10 +4,10 @@ on early-fs
     mkdir /data 0771 system system
     mkdir /cache 0770 system cache
     mkdir /devlog 0700 root root
-    mount ext4 /dev/block/mmcblk0p25 /system wait ro barrier=1
-    mount ext4 /dev/block/mmcblk0p26 /data wait noatime nosuid nodev barrier=1 noauto_da_alloc
-    mount ext4 /dev/block/mmcblk0p27 /cache wait noatime nosuid nodev barrier=1
-    mount ext4 /dev/block/mmcblk0p28 /devlog wait noatime nosuid nodev barrier=1
+    mount ext4 /dev/block/mmcblk0p25 /system wait ro noatime nodiratime barrier=0 nouser_xattr
+    mount ext4 /dev/block/mmcblk0p26 /data wait noatime nodiratime nosuid nodev barrier=0 noauto_da_alloc nouser_xattr
+    mount ext4 /dev/block/mmcblk0p27 /cache wait noatime nodiratime nosuid nodev barrier=0 nouser_xattr
+    mount ext4 /dev/block/mmcblk0p28 /devlog wait noatime nodiratime nosuid nodev barrier=0 nouser_xattr
 
 import init.msm7x30.usb.rc
 
@@ -71,15 +71,6 @@ on boot
     # Radio_feedback permissions
     chown radio radio /dev/radio_feedback
     chmod 0660 /dev/radio_feedback
-
-    # Permissions for Camera
-    chmod 0666 /dev/msm_camera/config0
-    chmod 0666 /dev/msm_camera/control0
-    chmod 0666 /dev/msm_camera/frame0
-    chmod 0666 /dev/msm_camera/config1
-    chmod 0666 /dev/msm_camera/control1
-    chmod 0666 /dev/msm_camera/frame1
-    chmod 0666 /dev/graphics/fb0
 
 # Enable low memory killer to check file pages
     write /sys/module/lowmemorykiller/parameters/minfile 0,0,0,5120,5632,6144
