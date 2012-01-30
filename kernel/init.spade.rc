@@ -49,8 +49,8 @@ on boot
 
 
     # Bluetooth MAC address path
-    chown bluetooth bluetooth /sys/module/board_saga/parameters/bdaddr
-    setprop ro.bt.bdaddr_path /sys/module/board_saga/parameters/bdaddr
+    chown bluetooth bluetooth /sys/module/board_spade/parameters/bdaddr
+    setprop ro.bt.bdaddr_path /sys/module/board_spade/parameters/bdaddr
 
     # Bluetooth car dock pin
     chown system system /sys/class/switch/dock/bt_pin
