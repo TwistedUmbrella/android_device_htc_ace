@@ -54,6 +54,7 @@ cat /proc/cmdline | egrep -q '(PD9812000)|(PD9814000)'
             mv /system/etc/nam/AdieHWCodec.csv /system/etc
             mv /system/etc/nam/AIC3254_REG_DualMic_MCLK.csv /system/etc
             mv /system/etc/nam/gps.conf /system/etc
+            sed -i 's/ro.product.model.*=.*/ro.product.model=HTC\ Inspire\ 4G/g' /system/build.prop
       fi
     rm -R /system/etc/nam
 fi
