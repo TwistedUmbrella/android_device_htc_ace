@@ -41,7 +41,7 @@
 
 #camera
 /dev/gemini0            0660    system      camera
-/dev/msm_camera/*       0660    system      camera
+/dev/msm_camera/*       0666    system      camera
 
 #radio
 /dev/oncrpc/*           0660    radio       system
