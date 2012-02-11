@@ -40,5 +40,22 @@
 /dev/uinput             0660    system      bluetooth
 
 #camera
-/dev/gemini0            0660    system     camera
-/dev/msm_camera/*       0660    system     camera
+/dev/gemini0            0660    system      camera
+/dev/msm_camera/*       0660    system      camera
+
+#radio
+/dev/oncrpc/*           0660    radio       system
+/dev/smd0               0640    radio       radio
+/dev/qmi0               0640    radio       radio
+/dev/qmi1               0640    radio       radio
+/dev/qmi2               0640    radio       radio
+/dev/tun                0640    vpn         vpn
+
+#audio
+/dev/pmem_adsp*         0660    system      audio
+/dev/adsp/*             0660    system      audio
+/dev/snd/*              0660    system      audio
+/dev/msm_pcm_out*       0660    system      audio
+/dev/msm_pcm_in*        0660    system      audio
+/dev/msm_mp3*           0660    system      audio
+/dev/htc-acoustic       0660    system      audio
