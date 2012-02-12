@@ -5,6 +5,7 @@
 /dev/radio_feedback     0660    radio       radio
 /dev/smd9               0600    system      system
 /dev/tun                0640    vpn         vpn
+/dev/tun                0640    vpn         vpn
 
 #sensors
 /dev/akm8975_daemon     0640    compass     system
@@ -24,6 +25,10 @@
 /dev/pmem_audio         0660    system      audio
 /dev/gemini*            0660    system      audio
 /dev/tpa2051d3          0660    system      audio
+/dev/pmem_adsp*         0660    system      audio
+/dev/adsp/*             0660    system      audio
+/dev/snd/*              0660    system      audio
+/dev/htc-acoustic       0660    system      audio
 
 #graphics
 /dev/msm_rotator        0660    system      graphics
@@ -42,20 +47,3 @@
 #camera
 /dev/gemini0            0660    system      camera
 /dev/msm_camera/*       0666    system      camera
-
-#radio
-/dev/oncrpc/*           0660    radio       system
-/dev/smd0               0640    radio       radio
-/dev/qmi0               0640    radio       radio
-/dev/qmi1               0640    radio       radio
-/dev/qmi2               0640    radio       radio
-/dev/tun                0640    vpn         vpn
-
-#audio
-/dev/pmem_adsp*         0660    system      audio
-/dev/adsp/*             0660    system      audio
-/dev/snd/*              0660    system      audio
-/dev/msm_pcm_out*       0660    system      audio
-/dev/msm_pcm_in*        0660    system      audio
-/dev/msm_mp3*           0660    system      audio
-/dev/htc-acoustic       0660    system      audio
