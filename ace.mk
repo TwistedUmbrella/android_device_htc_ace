@@ -168,9 +168,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
 # Kernel Modules
-PRODUCT_COPY_FILES += \
-    device/htc/ace/kernel/lib/modules/qc_pcm_in.ko:system/lib/modules/qc_pcm_in.ko \
-    device/htc/ace/kernel/lib/modules/bcm4329.ko:system/lib/modules/bcm4329.ko
+PRODUCT_COPY_FILES += $(shell \
+    find device/htc/mecha/kernel/lib/modules -name '*.ko' \
+    | sed -r 's/^\/?(.*\/)([^/ ]+)$$/\1\2:system\/lib\/modules\/\2/' \
+    | tr '\n' ' ')
 
 # Script to signal boot completion for init.d
 PRODUCT_COPY_FILES += \
