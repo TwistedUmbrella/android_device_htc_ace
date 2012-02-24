@@ -12,6 +12,7 @@ ro.config.soundlock=false
 
 # Screen Density
 ro.sf.lcd_density=160
+ro.config.statusbar=true
 
 # Device Display
 debug.fb.rgb565=0
