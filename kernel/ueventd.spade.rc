@@ -44,4 +44,4 @@
 
 #camera
 /dev/gemini0            0660    system      camera
-/dev/msm_camera/*       0666    system      camera
+/dev/msm_camera/*       0660    system      camera
