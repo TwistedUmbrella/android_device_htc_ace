@@ -169,7 +169,7 @@ PRODUCT_COPY_FILES += \
 
 # Kernel Modules
 PRODUCT_COPY_FILES += $(shell \
-    find device/htc/mecha/kernel/lib/modules -name '*.ko' \
+    find device/htc/ace/kernel/lib/modules -name '*.ko' \
     | sed -r 's/^\/?(.*\/)([^/ ]+)$$/\1\2:system\/lib\/modules\/\2/' \
     | tr '\n' ' ')
 
