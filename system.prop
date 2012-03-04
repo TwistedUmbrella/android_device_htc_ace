@@ -3,7 +3,7 @@
 # reason later
 windowsmgr.max_events_per_sec=275
 ro.config.disable_hw_accel=false
-ro.config.soundlock=false
+ro.camera.preview=true
 
 # end build properties
 #
