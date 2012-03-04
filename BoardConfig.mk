@@ -55,9 +55,6 @@ BOARD_FLASH_BLOCK_SIZE := 262144
 TARGET_SPECIFIC_HEADER_PATH := device/htc/msm7x30-common/include
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/usb_mass_storage/lun0/file
 
-WIFI_DRIVER_MODULE_ARG := "firmware_path=/vendor/firmware/fw_bcm4329.bin nvram_path=/proc/calibration iface_name=wlan"
-# TARGET_CUSTOM_WIFI := ../../device/htc/ace/hardware/wifi/wifi.c
-
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
 TARGET_PREBUILT_KERNEL := device/htc/ace/kernel/kernel
 
