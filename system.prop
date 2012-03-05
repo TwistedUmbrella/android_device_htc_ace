@@ -19,8 +19,8 @@ debug.fb.rgb565=0
 
 # Qualcomm Display
 debug.sf.hw=1
-debug.composition.type=dyn
-ro.sf.compbypass.enable=1
+ro.sf.compbypass.enable=0
+# debug.composition.type=dyn
 com.qc.hardware=true
 debug.enabletr=false
 com.qc.hdmi_out=false
