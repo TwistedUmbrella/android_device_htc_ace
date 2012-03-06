@@ -1,8 +1,4 @@
-# This defines the max event window manager can
-# handle in 1 s. We may adjust this # for performance
-# reason later
-windowsmgr.max_events_per_sec=275
-ro.config.disable_hw_accel=false
+
 ro.camera.preview=true
 
 # end build properties
@@ -10,15 +6,7 @@ ro.camera.preview=true
 # system.prop for ace
 #
 
-# Screen Density
-ro.sf.lcd_density=160
-ro.config.statusbar=true
-
-# Device Display
-debug.fb.rgb565=0
-
 # Qualcomm Display
-debug.sf.hw=1
 ro.sf.compbypass.enable=0
 # debug.composition.type=dyn
 com.qc.hardware=true
