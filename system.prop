@@ -7,9 +7,6 @@ ro.camera.preview=true
 #
 
 # Qualcomm Display
-ro.sf.compbypass.enable=0
-# debug.composition.type=dyn
-com.qc.hardware=true
 debug.enabletr=false
 com.qc.hdmi_out=false
 
@@ -41,9 +38,6 @@ ro.ril.hsxpa=3
 # Default network type.
 # 0 => WCDMA preferred.
 ro.telephony.default_network=0
-
-wifi.interface=eth0
-wifi.supplicant_scan_interval=100
 
 mobiledata.interfaces=gannet0,rmnet0,rmnet1,rmnet2
 
