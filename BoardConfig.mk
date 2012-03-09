@@ -38,9 +38,6 @@ BOARD_KERNEL_RECOVERY_CMDLINE := $(BOARD_KERNEL_CMDLINE) msmsdcc_power_gpio=88
 BOARD_KERNEL_BASE := 0x4000000
 BOARD_KERNEL_PAGE_SIZE := 4096
 
-# Workaround for ace broken overlay scaling
-BOARD_OVERLAY_MINIFICATION_LIMIT := 2
-
 # GPS Defines
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := spade
 BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 1240
@@ -53,7 +50,6 @@ BOARD_FLASH_BLOCK_SIZE := 262144
 
 # TARGET_SPECIFIC_HEADER_PATH := device/htc/ace/include
 TARGET_SPECIFIC_HEADER_PATH := device/htc/msm7x30-common/include
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/usb_mass_storage/lun0/file
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
 TARGET_PREBUILT_KERNEL := device/htc/ace/kernel/kernel
