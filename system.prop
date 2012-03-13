@@ -1,14 +1,30 @@
-
-ro.camera.preview=true
-
-# end build properties
 #
 # system.prop for ace
 #
 
 # Qualcomm Display
+com.qc.hardware=true
 debug.enabletr=false
 com.qc.hdmi_out=false
+ro.sf.compbypass.enable=0
+debug.composition.type=mdp
+ro.camera.preview=true
+
+# Android Display
+windowsmgr.max_events_per_sec=275
+ro.config.disable_hw_accel=false
+debug.fb.rgb565=0
+debug.sf.hw=1
+    
+ro.sf.lcd_density=240
+qemu.sf.lcd_density=160
+
+# Connectivity
+wifi.interface = eth0
+wifi.supplicant_scan_interval=120
+
+persist.sys.usb.config=mass_storage,adb
+persist.service.adb.enable=1
 
 # Modify MMS APN retry timer from 5s to 2s.
 ro.gsm.2nd_data_retry_config=max_retries=3, 2000, 2000, 2000
