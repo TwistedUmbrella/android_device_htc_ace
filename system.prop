@@ -23,6 +23,9 @@ qemu.sf.lcd_density=160
 wifi.interface = eth0
 wifi.supplicant_scan_interval=120
 
+# Proximity
+gsm.proximity.enable=1
+
 persist.sys.usb.config=mass_storage,adb
 persist.service.adb.enable=1
 
