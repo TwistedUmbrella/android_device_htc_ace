@@ -8,7 +8,6 @@ debug.enabletr=false
 com.qc.hdmi_out=false
 ro.sf.compbypass.enable=0
 debug.composition.type=mdp
-ro.camera.preview=true
 
 # Android Display
 windowsmgr.max_events_per_sec=275
