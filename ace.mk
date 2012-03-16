@@ -68,9 +68,6 @@ PRODUCT_COPY_FILES += \
 
 # Firmware
 PRODUCT_COPY_FILES += \
-    device/htc/ace/system/etc/firmware/bcm4329.hcd:system/etc/firmware/bcm4329.hcd \
-    device/htc/ace/system/etc/firmware/fw_bcm4329.bin:system/etc/firmware/fw_bcm4329.bin \
-    device/htc/ace/system/etc/firmware/fw_bcm4329_apsta.bin:system/etc/firmware/fw_bcm4329_apsta.bin \
     device/htc/ace/system/etc/firmware/default.acdb:system/etc/firmware/default.acdb \
     device/htc/ace/system/etc/firmware/default_org.acdb:system/etc/firmware/default_org.acdb
 
