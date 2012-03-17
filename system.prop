@@ -4,7 +4,7 @@
 
 # Qualcomm Display
 com.qc.hardware=true
-debug.enabletr=false
+debug.enabletr=true
 com.qc.hdmi_out=false
 ro.sf.compbypass.enable=0
 debug.composition.type=mdp
