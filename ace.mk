@@ -111,16 +111,26 @@ PRODUCT_COPY_FILES += \
 # Additional NAM Audio DSP Profiles to NAM Package
 PRODUCT_COPY_FILES += \
     device/htc/ace/system/bin/modelid_cfg.sh:system/bin/modelid_cfg.sh \
-    device/htc/ace/system/etc/nam/default.acdb:system/etc/nam/default.acdb \
-    device/htc/ace/system/etc/nam/default_org.acdb:system/etc/nam/default_org.acdb \
     device/htc/ace/system/etc/nam/AdieHWCodec.csv:system/etc/nam/AdieHWCodec.csv \
     device/htc/ace/system/etc/nam/AIC3254_REG_DualMic_MCLK.csv:system/etc/nam/AIC3254_REG_DualMic_MCLK.csv \
     device/htc/ace/system/etc/nam/CodecDSPID_MCLK.txt:system/etc/nam/CodecDSPID_MCLK.txt \
-    device/htc/ace/system/etc/nam/soundimage/Sound_Treble_Booster_MCLK.txt:system/etc/nam/soundimage/Sound_Treble_Booster_MCLK.txt \
-    device/htc/ace/system/etc/nam/soundimage/Sound_Vocal_Booster_MCLK.txt:system/etc/nam/soundimage/Sound_Vocal_Booster_MCLK.txt \
-    device/htc/ace/system/etc/nam/soundimage/Sound_SRS_A_SPK_MCLK.txt:system/etc/nam/soundimage/Sound_SRS_A_SPK_MCLK.txt \
-    device/htc/ace/system/etc/nam/soundimage/Sound_SRS_V_HP_MCLK.txt:system/etc/nam/soundimage/Sound_SRS_V_HP_MCLK.txt \
-    device/htc/ace/system/etc/nam/soundimage/Sound_SRS_V_SPK_MCLK.txt:system/etc/nam/soundimage/Sound_SRS_V_SPK_MCLK.txt \
+    device/htc/ace/system/etc/nam/CodecDSPID.txt:system/etc/nam/CodecDSPID.txt \
+    device/htc/ace/system/etc/nam/default.acdb:system/etc/nam/default.acdb \
+    device/htc/ace/system/etc/nam/default_org.acdb:system/etc/nam/default_org.acdb \
+    device/htc/ace/system/etc/nam/gps.conf:system/etc/nam/gps.conf \
+    device/htc/ace/system/etc/nam/soundimage/Sound_Bass_Booster_MCLK.txt:system/etc/nam/soundimage/Sound_Bass_Booster_MCLK.txt \
+    device/htc/ace/system/etc/nam/soundimage/Sound_Blues_MCLK.txt:system/etc/nam/soundimage/Sound_Blues_MCLK.txt \
+    device/htc/ace/system/etc/nam/soundimage/Sound_Classical_MCLK.txt:system/etc/nam/soundimage/Sound_Classical_MCLK.txt \
+    device/htc/ace/system/etc/nam/soundimage/Sound_Country_MCLK.txt:system/etc/nam/soundimage/Sound_Country_MCLK.txt \
+    device/htc/ace/system/etc/nam/soundimage/Sound_Dolby_A_HP_MCLK.txt:system/etc/nam/soundimage/Sound_Dolby_A_HP_MCLK.txt \
+    device/htc/ace/system/etc/nam/soundimage/Sound_Dolby_A_SPK_MCLK.txt:system/etc/nam/soundimage/Sound_Dolby_A_SPK_MCLK.txt \
+    device/htc/ace/system/etc/nam/soundimage/Sound_Dolby_HP_MCLK.txt:system/etc/nam/soundimage/Sound_Dolby_HP_MCLK.txt \
+    device/htc/ace/system/etc/nam/soundimage/Sound_Dolby_Spk_MCLK.txt:system/etc/nam/soundimage/Sound_Dolby_Spk_MCLK.txt \
+    device/htc/ace/system/etc/nam/soundimage/Sound_Dolby_V_HP_MCLK.txt:system/etc/nam/soundimage/Sound_Dolby_V_HP_MCLK.txt \
+    device/htc/ace/system/etc/nam/soundimage/Sound_Dolby_V_SPK_MCLK.txt:system/etc/nam/soundimage/Sound_Dolby_V_SPK_MCLK.txt \
+    device/htc/ace/system/etc/nam/soundimage/Sound_Dualmic_EP_MCLK.txt:system/etc/nam/soundimage/Sound_Dualmic_EP_MCLK.txt \
+    device/htc/ace/system/etc/nam/soundimage/Sound_Dualmic_MCLK.txt:system/etc/nam/soundimage/Sound_Dualmic_MCLK.txt \
+    device/htc/ace/system/etc/nam/soundimage/Sound_Dualmic_SPK_MCLK.txt:system/etc/nam/soundimage/Sound_Dualmic_SPK_MCLK.txt \
     device/htc/ace/system/etc/nam/soundimage/Sound_Jazz_MCLK.txt:system/etc/nam/soundimage/Sound_Jazz_MCLK.txt \
     device/htc/ace/system/etc/nam/soundimage/Sound_Latin_MCLK.txt:system/etc/nam/soundimage/Sound_Latin_MCLK.txt \
     device/htc/ace/system/etc/nam/soundimage/Sound_New_Age_MCLK.txt:system/etc/nam/soundimage/Sound_New_Age_MCLK.txt \
@@ -129,20 +139,12 @@ PRODUCT_COPY_FILES += \
     device/htc/ace/system/etc/nam/soundimage/Sound_Pop_MCLK.txt:system/etc/nam/soundimage/Sound_Pop_MCLK.txt \
     device/htc/ace/system/etc/nam/soundimage/Sound_R_B_MCLK.txt:system/etc/nam/soundimage/Sound_R_B_MCLK.txt \
     device/htc/ace/system/etc/nam/soundimage/Sound_Rock_MCLK.txt:system/etc/nam/soundimage/soundimage/Sound_Rock_MCLK.txt \
+    device/htc/ace/system/etc/nam/soundimage/Sound_SRS_A_SPK_MCLK.txt:system/etc/nam/soundimage/Sound_SRS_A_SPK_MCLK.txt \
+    device/htc/ace/system/etc/nam/soundimage/Sound_SRS_V_HP_MCLK.txt:system/etc/nam/soundimage/Sound_SRS_V_HP_MCLK.txt \
+    device/htc/ace/system/etc/nam/soundimage/Sound_SRS_V_SPK_MCLK.txt:system/etc/nam/soundimage/Sound_SRS_V_SPK_MCLK.txt \
     device/htc/ace/system/etc/nam/soundimage/Sound_SRS_A_HP_MCLK.txt:system/etc/nam/soundimage/Sound_SRS_A_HP_MCLK.txt \
-    device/htc/ace/system/etc/nam/soundimage/Sound_Dualmic_SPK_MCLK.txt:system/etc/nam/soundimage/Sound_Dualmic_SPK_MCLK.txt \
-    device/htc/ace/system/etc/nam/soundimage/Sound_Dualmic_EP_MCLK.txt:system/etc/nam/soundimage/Sound_Dualmic_EP_MCLK.txt \
-    device/htc/ace/system/etc/nam/soundimage/Sound_Dualmic_MCLK.txt:system/etc/nam/soundimage/Sound_Dualmic_MCLK.txt \
-    device/htc/ace/system/etc/nam/soundimage/Sound_Dolby_A_SPK_MCLK.txt:system/etc/nam/soundimage/Sound_Dolby_A_SPK_MCLK.txt \
-    device/htc/ace/system/etc/nam/soundimage/Sound_Dolby_HP_MCLK.txt:system/etc/nam/soundimage/Sound_Dolby_HP_MCLK.txt \
-    device/htc/ace/system/etc/nam/soundimage/Sound_Dolby_Spk_MCLK.txt:system/etc/nam/soundimage/Sound_Dolby_Spk_MCLK.txt \
-    device/htc/ace/system/etc/nam/soundimage/Sound_Dolby_V_HP_MCLK.txt:system/etc/nam/soundimage/Sound_Dolby_V_HP_MCLK.txt \
-    device/htc/ace/system/etc/nam/soundimage/Sound_Dolby_V_SPK_MCLK.txt:system/etc/nam/soundimage/Sound_Dolby_V_SPK_MCLK.txt \
-    device/htc/ace/system/etc/nam/soundimage/Sound_Dolby_A_HP_MCLK.txt:system/etc/nam/soundimage/Sound_Dolby_A_HP_MCLK.txt \
-    device/htc/ace/system/etc/nam/soundimage/Sound_Bass_Booster_MCLK.txt:system/etc/nam/soundimage/Sound_Bass_Booster_MCLK.txt \
-    device/htc/ace/system/etc/nam/soundimage/Sound_Blues_MCLK.txt:system/etc/nam/soundimage/Sound_Blues_MCLK.txt \
-    device/htc/ace/system/etc/nam/soundimage/Sound_Classical_MCLK.txt:system/etc/nam/soundimage/Sound_Classical_MCLK.txt \
-    device/htc/ace/system/etc/nam/soundimage/Sound_Country_MCLK.txt:system/etc/nam/soundimage/Sound_Country_MCLK.txt
+    device/htc/ace/system/etc/nam/soundimage/Sound_Treble_Booster_MCLK.txt:system/etc/nam/soundimage/Sound_Treble_Booster_MCLK.txt \
+    device/htc/ace/system/etc/nam/soundimage/Sound_Vocal_Booster_MCLK.txt:system/etc/nam/soundimage/Sound_Vocal_Booster_MCLK.txt
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise

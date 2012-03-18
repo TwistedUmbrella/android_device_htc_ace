@@ -48,13 +48,14 @@ if [ $? = 0 ];
 cat /proc/cmdline | egrep -q '(PD9812000)|(PD9814000)'
       if [ $? = 0 ];
          then
-            mv /system/etc/nam/default* /system/etc/firmware/
-            mv /system/etc/nam/CodecDSPID_MCLK.txt /system/etc
-            mv /system/etc/nam/*MCLK.txt /system/etc/soundimage/
-            mv /system/etc/nam/AdieHWCodec.csv /system/etc
-            mv /system/etc/nam/AIC3254_REG_DualMic_MCLK.csv /system/etc
-            mv /system/etc/nam/gps.conf /system/etc
-            mv -R /system/etc/nam/soundimage/*.txt /system/etc/soundimage
+            cp -R /system/etc/nam/default* /system/etc/firmware/
+            cp -R /system/etc/nam/CodecDSPID.txt /system/etc
+            cp -R /system/etc/nam/CodecDSPID_MCLK.txt /system/etc
+            cp -R /system/etc/nam/*MCLK.txt /system/etc/soundimage/
+            cp -R /system/etc/nam/AdieHWCodec.csv /system/etc
+            cp -R /system/etc/nam/AIC3254_REG_DualMic_MCLK.csv /system/etc
+            cp -R /system/etc/nam/gps.conf /system/etc
+            cp -R /system/etc/nam/soundimage/*.txt /system/etc/soundimage
             sed -i 's/ro.product.model.*=.*/ro.product.model=HTC\ Inspire\ 4G/g' /system/build.prop
             /system/bin/snd3254 -dspmode 0
       fi
