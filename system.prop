@@ -4,7 +4,7 @@
 
 # Qualcomm Display
 com.qc.hardware=true
-debug.enabletr=true
+debug.enabletr=false
 com.qc.hdmi_out=false
 ro.sf.compbypass.enable=0
 debug.composition.type=mdp
@@ -23,7 +23,7 @@ wifi.interface = eth0
 wifi.supplicant_scan_interval=120
 
 # Proximity
-gsm.proximity.enable=1
+gsm.proximity.enable=true
 
 persist.sys.usb.config=mass_storage,adb
 persist.service.adb.enable=1
