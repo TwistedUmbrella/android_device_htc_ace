@@ -45,7 +45,7 @@ fi
 cat /proc/cmdline | grep -q spade
 if [ $? = 0 ];
    then 
-cat /proc/cmdline | egrep -q '(PD9812000)|(PD9814000)'
+cat /proc/cmdline | egrep -q '(PD9812000)'
       if [ $? = 0 ];
          then
             cp -R /system/etc/nam/default* /system/etc/firmware/
@@ -59,5 +59,13 @@ cat /proc/cmdline | egrep -q '(PD9812000)|(PD9814000)'
             sed -i 's/ro.product.model.*=.*/ro.product.model=HTC\ Inspire\ 4G/g' /system/build.prop
             /system/bin/snd3254 -dspmode 0
       fi
-    rm -R /system/etc/nam
 fi
+cat /proc/cmdline | egrep -q '(PD9814000)'
+      if [ $? = 0 ];
+         then
+            cp -R /system/etc/nam/gps.conf /system/etc
+            sed -i 's/ro.product.model.*=.*/ro.product.model=HTC\ Telus\ 4G/g' /system/build.prop
+            /system/bin/snd3254 -dspmode 0
+      fi
+fi
+rm -R /system/etc/nam
