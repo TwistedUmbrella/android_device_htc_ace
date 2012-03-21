@@ -53,7 +53,6 @@ cat /proc/cmdline | egrep -q '(PD9812000)'
             cp -R /system/etc/nam/CodecDSPID_MCLK.txt /system/etc
             cp -R /system/etc/nam/*MCLK.txt /system/etc/soundimage/
             cp -R /system/etc/nam/AdieHWCodec.csv /system/etc
-            cp -R /system/etc/nam/AIC3254_REG_DualMic_MCLK.csv /system/etc
             cp -R /system/etc/nam/gps.conf /system/etc
             cp -R /system/etc/nam/soundimage/*.txt /system/etc/soundimage
             sed -i 's/ro.product.model.*=.*/ro.product.model=HTC\ Inspire\ 4G/g' /system/build.prop
