@@ -16,7 +16,6 @@ debug.fb.rgb565=0
 debug.sf.hw=1
     
 ro.sf.lcd_density=240
-qemu.sf.lcd_density=160
 
 # Connectivity
 wifi.interface = eth0
@@ -50,7 +49,6 @@ ro.ril.enable.amr.wideband=0
 ro.ril.enable.dtm=0
 ro.ril.gprsclass=12
 ro.ril.hsdpa.category=10
-ro.ril.hsupa.category=6
 ro.ril.hsxpa=3
 
 # Default network type.
