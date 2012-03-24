@@ -1,5 +1,4 @@
 import init.msm7x30.usb.rc
-import init.htc.kernel.rc
 
 on early-init
     export EXTERNAL_STORAGE /mnt/sdcard
