@@ -172,8 +172,11 @@ PRODUCT_COPY_FILES += $(shell \
     | sed -r 's/^\/?(.*\/)([^/ ]+)$$/\1\2:system\/lib\/modules\/\2/' \
     | tr '\n' ' ')
 
-# Script to signal boot completion for init.d
+# Kernel Customization
 PRODUCT_COPY_FILES += \
+    device/htc/ace/kernel/sbin/speedtweak.sh:root/sbin/speedtweak.sh \
+    device/htc/ace/kernel/sbin/zram:root/sbin/zram \
+    device/htc/ace/kernel/xbin/wget:system/xbin/wget \
     device/htc/ace/kernel/etc/init.d/100complete:system/etc/init.d/100complete
 
 # common msm7x30 configs
