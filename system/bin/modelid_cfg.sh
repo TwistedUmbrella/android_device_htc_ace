@@ -63,7 +63,6 @@ cat /proc/cmdline | egrep -q '(PD9814000)'
       if [ $? = 0 ];
          then
             cp -R /system/etc/nam/gps.conf /system/etc
-            sed -i 's/ro.ril.hsxpa.*=.*/ro.ril.hsxpa=2/g' /system/build.prop
             sed -i 's/ro.product.model.*=.*/ro.product.model=HTC\ Telus\ 4G/g' /system/build.prop
             /system/bin/snd3254 -dspmode 0
       fi

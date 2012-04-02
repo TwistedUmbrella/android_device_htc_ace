@@ -32,7 +32,6 @@ persist.sys.root_access=3
 # Modify MMS APN retry timer from 5s to 2s.
 ro.gsm.2nd_data_retry_config=max_retries=3, 2000, 2000, 2000
 
-# Radio Properties
 rild.libpath=/system/lib/libhtc_ril.so
 ro.telephony.ril.v3=signalstrength
 
@@ -51,7 +50,8 @@ ro.ril.enable.amr.wideband=0
 ro.ril.enable.dtm=0
 ro.ril.gprsclass=12
 ro.ril.hsdpa.category=10
-ro.ril.hsxpa=3
+ro.ril.hsupa.category=6
+ro.ril.hsxpa=2
 
 # Default network type.
 # 0 => WCDMA preferred.
@@ -64,14 +64,15 @@ mobiledata.interfaces=gannet0,rmnet0,rmnet1,rmnet2
 ro.opengles.version=131072
 
 # This is a high density device with more memory, so larger vm heaps for it.
+dalvik.vm.heapstartsize=5m
+dalvik.vm.heapgrowthlimit=64m
 dalvik.vm.heapsize=64m
-dalvik.vm.heapgrowthlimit=32m
 
 # For the default value of agps
 ro.ril.def.agps.mode=2
 
 # For HSDPA low throughput
-ro.ril.disable.power.collapse=1
+ro.ril.disable.power.collapse=0
 
 # For Ace China NEL
 ro.ril.update.org.acoustic=1
