@@ -55,7 +55,7 @@ cat /proc/cmdline | egrep -q '(PD9812000)'
             cp -R /system/etc/nam/AdieHWCodec.csv /system/etc
             cp -R /system/etc/nam/gps.conf /system/etc
             cp -R /system/etc/nam/soundimage/*.txt /system/etc/soundimage
-            sed -i 's/ro.product.model.*=.*/ro.product.model=HTC\ Inspire\ 4G/g' /system/build.prop
+            sed -i 's/ro.product.model.*=.*/ro.product.model=Inspire\ 4G/g' /system/build.prop
             /system/bin/snd3254 -dspmode 0
       fi
 fi
@@ -63,7 +63,7 @@ cat /proc/cmdline | egrep -q '(PD9814000)'
       if [ $? = 0 ];
          then
             cp -R /system/etc/nam/gps.conf /system/etc
-            sed -i 's/ro.product.model.*=.*/ro.product.model=HTC\ Telus\ 4G/g' /system/build.prop
+            sed -i 's/ro.product.model.*=.*/ro.product.model=Telus\ 4G/g' /system/build.prop
             /system/bin/snd3254 -dspmode 0
       fi
 fi
