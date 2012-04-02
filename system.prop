@@ -4,7 +4,6 @@
 
 # Qualcomm Display
 com.qc.hardware=true
-debug.enabletr=false
 com.qc.hdmi_out=false
 debug.composition.type=dyn
 ro.sf.compbypass.enable=1
@@ -18,14 +17,14 @@ debug.sf.hw=1
     
 ro.sf.lcd_density=240
 
-ro.config.play.bootsound=0
-
 # Connectivity
 wifi.interface = eth0
 wifi.supplicant_scan_interval=120
 
-# Proximity
+# Playground Panel
+debug.enabletr=false
 gsm.proximity.enable=1
+ro.config.play.bootsound=1
 
 persist.sys.usb.config=mass_storage,adb
 persist.service.adb.enable=1

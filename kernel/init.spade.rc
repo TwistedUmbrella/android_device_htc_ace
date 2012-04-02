@@ -187,7 +187,6 @@ service htc_ebdlogd_rel /system/bin/htc_ebdlogd -s -k
     disabled
     oneshot
 
-###Bootsound - Safe to Delete: Start ###
  service bootsound /system/bin/bootsound
     user media
     group audio
@@ -199,7 +198,6 @@ on property:init.svc.bootanim=running   # to correct timing
 
 on property:dev.bootcomplete=1
     stop bootsound
-### Bootsound - Safe to Delete: End ###
 
 on property:ro.build.tags=test-keys
     start htc_ebdlogd
