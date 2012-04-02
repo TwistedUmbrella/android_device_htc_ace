@@ -18,6 +18,8 @@ debug.sf.hw=1
     
 ro.sf.lcd_density=240
 
+ro.config.play.bootsound=0
+
 # Connectivity
 wifi.interface = eth0
 wifi.supplicant_scan_interval=120
