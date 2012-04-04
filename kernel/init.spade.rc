@@ -161,6 +161,7 @@ service hciattach /system/bin/brcm_patchram_plus --enable_hci --enable_lpm \
     group bluetooth net_bt_admin
     disabled
 
+# for USB internet sharing
 service udhcpd /system/bin/udhcpd
     disabled
     oneshot
@@ -170,6 +171,10 @@ service netsharing_on /system/bin/netsharing net on
     oneshot
 
 service netsharing_off /system/bin/netsharing net off
+    disabled
+    oneshot
+
+service netsharing_pass /system/bin/netsharing net_pass on
     disabled
     oneshot
 
