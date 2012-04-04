@@ -12,11 +12,8 @@
 /dev/akm8975_aot        0640    compass     system
 
 #video
-/dev/gemini0            0660    system      system
+/dev/gemini0            0660    system      camera
 /dev/msm_camera/*       0660    system      camera
-/dev/video*             0660    system      camera
-/dev/pmem_smipool*      0660    system      camera
-/dev/msm_vidc*          0660    system      graphics
 /dev/msm_vidc_reg       0660    system      audio
 /dev/msm_vidc_dec       0660    system      audio
 /dev/msm_vidc_enc       0660    system      audio
