@@ -108,10 +108,6 @@ PRODUCT_COPY_FILES += \
     device/htc/ace/system/etc/soundimage/Sound_Vocal_Booster.txt:system/etc/soundimage/Sound_Vocal_Booster.txt
 #    device/htc/ace/system/etc/audio_effects.conf:/system/etc/audio_effects.conf
 
-# Additional NAM GPS Package
-PRODUCT_COPY_FILES += \
-    device/htc/common/system/etc/gps.conf:system/etc/nam/gps.conf
-
 # Additional NAM Audio DSP Profiles to NAM Package
 PRODUCT_COPY_FILES += \
     device/htc/ace/system/bin/modelid_cfg.sh:system/bin/modelid_cfg.sh \
@@ -121,6 +117,7 @@ PRODUCT_COPY_FILES += \
     device/htc/ace/system/etc/nam/CodecDSPID.txt:system/etc/nam/CodecDSPID.txt \
     device/htc/ace/system/etc/nam/default.acdb:system/etc/nam/default.acdb \
     device/htc/ace/system/etc/nam/default_org.acdb:system/etc/nam/default_org.acdb \
+    device/htc/ace/system/etc/nam/gps.conf:system/etc/nam/gps.conf \
     device/htc/ace/system/etc/nam/soundimage/Sound_Bass_Booster_MCLK.txt:system/etc/nam/soundimage/Sound_Bass_Booster_MCLK.txt \
     device/htc/ace/system/etc/nam/soundimage/Sound_Blues_MCLK.txt:system/etc/nam/soundimage/Sound_Blues_MCLK.txt \
     device/htc/ace/system/etc/nam/soundimage/Sound_Classical_MCLK.txt:system/etc/nam/soundimage/Sound_Classical_MCLK.txt \
