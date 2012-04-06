@@ -21,11 +21,6 @@ ro.sf.lcd_density=240
 wifi.interface = wlan0
 wifi.supplicant_scan_interval=120
 
-# Playground Panel
-debug.enabletr=false
-gsm.proximity.enable=1
-ro.config.play.bootsound=1
-
 persist.sys.usb.config=mass_storage,adb
 persist.service.adb.enable=1
 persist.sys.root_access=3
