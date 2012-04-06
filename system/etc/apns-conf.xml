@@ -563,9 +563,7 @@
   <apn carrier="MediaNet" mcc="310" mnc="410" apn="phone" type="default,supl" />
   <apn carrier="MediaNet mms" mcc="310" mnc="410" apn="wap.cingular.com" user="WAP@CINGULARGPRS.COM" password="CINGULAR1" mmsc="http://mmsc.cingular.com" mmsproxy="wireless.cingular.com" mmsport="80" type="default,supl,mms" />
   <apn carrier="DataConnect" mcc="310" mnc="470" apn="isp.cingular" type="default,supl" />
-  <apn carrier="MediaNet" mcc="310" mnc="470" apn="wap.cingular" user="WAP@CINGULARGPRS.COM" password="CINGULAR1" mmsc="http://mmsc.cingular.com" mmsproxy="66.209.11.32" mmsport="8080" type="default,supl,mms" />
   <apn carrier="DataConnect" mcc="310" mnc="480" apn="isp.cingular" type="default,supl" />
-  <apn carrier="MediaNet" mcc="310" mnc="480" apn="wap.cingular" user="WAP@CINGULARGPRS.COM" password="CINGULAR1" mmsc="http://mmsc.cingular.com" mmsproxy="66.209.11.32" mmsport="8080" type="default,supl,mms" />
   <apn carrier="T-Mobile US 490" mcc="310" mnc="490" apn="epc.tmobile.com" user="none" password="none" server="*" mmsc="http://mms.msg.eng.t-mobile.com/mms/wapenc" type="default,supl,mms" />
   <apn carrier="GoodCall Picture Message" mcc="310" mnc="490" apn="good.call" mmsc="http://mms.suncom.net:8088/mms" mmsproxy="66.150.33.125" mmsport="8080" type="mms" />
   <apn carrier="Suncom MMS" mcc="310" mnc="490" apn="mms" mmsc="http://mms.suncom.net:8088/mms" mmsproxy="66.150.33.125" mmsport="8080" type="mms" />
