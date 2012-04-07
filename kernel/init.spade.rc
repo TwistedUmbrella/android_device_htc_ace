@@ -18,8 +18,8 @@ on early-fs
 
     symlink /system/vendor/firmware/fw_bcm4329.bin /vendor/firmware/fw_bcm4329.bin
     symlink /system/vendor/firmware/fw_bcm4329_apsta.bin /vendor/firmware/fw_bcm4329_apsta.bin
+    symlink /system/vendor/firmware/fw_bcm4329_p2p.bin /vendor/firmware/fw_bcm4329_p2p.bin
     symlink /system/vendor/firmware/bcm4329.hcd /vendor/firmware/bcm4329.hcd
-
 on boot
     mkdir /data/radio 0770 radio radio
     mkdir /data/misc 1771 system misc
