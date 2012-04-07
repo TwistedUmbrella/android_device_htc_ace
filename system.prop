@@ -53,7 +53,7 @@ ro.ril.hsxpa=2
 # 0 => WCDMA preferred.
 ro.telephony.default_network=0
 
-mobiledata.interfaces=gannet0,rmnet0,rmnet1,rmnet2
+mobiledata.interfaces=rmnet0,wlan0,gprs,ppp0
 
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
