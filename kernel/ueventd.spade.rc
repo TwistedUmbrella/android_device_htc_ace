@@ -15,7 +15,7 @@
 /dev/msm_camera/*       0660    system      camera
 /dev/pmem_camera*       0660    system      camera
 /dev/video*             0660    system      camera
-/dev/msm_vidc*          0660    system      media
+/dev/msm_vidc*          0660    system      graphics
 #audio
 /dev/htc-acdb           0660    system      audio
 /dev/msm_audio_dev_ctrl 0660    system      audio
