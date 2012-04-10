@@ -9,7 +9,7 @@
 #sensors
 /dev/akm8975_daemon     0640    compass     system
 /dev/akm8975_aot        0640    compass     system
-/dev/oncrpc/*           0660    radio       system
+/dev/oncrpc/*           0660    root        system
 
 #video
 /dev/gemini0            0660    system      camera
