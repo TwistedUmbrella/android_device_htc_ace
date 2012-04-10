@@ -20,7 +20,8 @@ on early-fs
     symlink /system/vendor/firmware/fw_bcm4329_apsta.bin /vendor/firmware/fw_bcm4329_apsta.bin
     symlink /system/vendor/firmware/fw_bcm4329_p2p.bin /vendor/firmware/fw_bcm4329_p2p.bin
     symlink /system/vendor/firmware/bcm4329.hcd /vendor/firmware/bcm4329.hcd
-on boot
+
+on post-fs-data
     mkdir /data/radio 0770 radio radio
     mkdir /data/misc 1771 system misc
     mkdir /data/misc/bluetoothd 0770 bluetooth bluetooth
@@ -31,6 +32,11 @@ on boot
     mkdir /data/misc/wifi/sockets 0770 wifi wifi
     mkdir /data/misc/dhcp 0770 dhcp dhcp
     chown dhcp dhcp /data/misc/dhcp
+
+    # Set indication (checked by vold) that we have finished this action
+    setprop vold.post_fs_data_done 1
+
+on boot
 
     chown system system /sys/module/serial/parameters/modem_enabled
     chown system system /dev/ttyHSUSB0
@@ -82,7 +88,6 @@ on boot
 
     # Bluetooth car dock pin
     chown system system /sys/class/switch/dock/bt_pin
-
 
     # for Flip to speaker
     chown radio radio /sys/class/htc_accelerometer/accelerometer/PhoneOnOffFlag
