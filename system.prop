@@ -45,7 +45,7 @@ ro.ril.enable.amr.wideband=0
 # ace RF team request
 ro.ril.enable.dtm=0
 ro.ril.gprsclass=12
-ro.ril.hsdpa.category=10
+ro.ril.hsupa.category=6
 ro.ril.hsxpa=2
 
 # Default network type.
