@@ -22,8 +22,6 @@ wifi.interface = wlan0
 wifi.supplicant_scan_interval=120
 
 persist.sys.usb.config=mass_storage,adb
-persist.service.adb.enable=1
-persist.sys.root_access=3
 
 # Modify MMS APN retry timer from 5s to 2s.
 ro.gsm.2nd_data_retry_config=max_retries=3, 2000, 2000, 2000
