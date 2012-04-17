@@ -48,9 +48,6 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 1232072704
 BOARD_BOOTIMAGE_PARTITION_SIZE := 4194304
 BOARD_FLASH_BLOCK_SIZE := 262144
 
-WIFI_DRIVER_MODULE_ARG := "firmware_path=/vendor/firmware/fw_bcm4329.bin nvram_path=/proc/calibration iface_name=wlan"
-TARGET_CUSTOM_IFACE := wlan0
-
 # TARGET_SPECIFIC_HEADER_PATH := device/htc/ace/include
 TARGET_SPECIFIC_HEADER_PATH := device/htc/msm7x30-common/include
 

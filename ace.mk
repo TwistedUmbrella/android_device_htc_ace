@@ -149,11 +149,6 @@ PRODUCT_COPY_FILES += \
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
 
-# High-density art, but English locale
-PRODUCT_LOCALES += en
-PRODUCT_AAPT_CONFIG := normal hdpi
-PRODUCT_AAPT_PREF_CONFIG := hdpi
-
 PRODUCT_COPY_FILES += \
     device/htc/ace/system/etc/vold.fstab:system/etc/vold.fstab
 
