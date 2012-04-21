@@ -8,6 +8,7 @@ com.qc.hdmi_out=false
 debug.composition.type=dyn
 ro.sf.compbypass.enable=1
 dev.pm.dyn_samplingrate=1
+debug.enabletr=true
 
 # Android Display
 windowsmgr.max_events_per_sec=275
@@ -65,10 +66,7 @@ dalvik.vm.heapsize=64m
 ro.ril.def.agps.mode=2
 
 # For HSDPA low throughput
-ro.ril.disable.power.collapse=0
-ro.ril.fast.dormancy.timeout=3
-ro.ril.enable.sbm.feature=1
-pm.sleep_mode=1
+ro.ril.disable.power.collapse=1
 
 # For Ace China NEL
 ro.ril.update.org.acoustic=1
