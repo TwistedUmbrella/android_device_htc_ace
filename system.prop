@@ -5,10 +5,9 @@
 # Qualcomm Display
 com.qc.hardware=true
 com.qc.hdmi_out=false
-debug.composition.type=dyn
-ro.sf.compbypass.enable=1
+debug.composition.type=mdp
+ro.sf.compbypass.enable=0
 dev.pm.dyn_samplingrate=1
-debug.enabletr=true
 
 # Android Display
 windowsmgr.max_events_per_sec=275
