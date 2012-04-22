@@ -10,7 +10,7 @@ ro.sf.compbypass.enable=0
 dev.pm.dyn_samplingrate=1
 
 # Android Display
-windowsmgr.max_events_per_sec=275
+windowsmgr.max_events_per_sec=150
 ro.config.disable_hw_accel=false
 debug.fb.rgb565=0
 debug.sf.hw=1
