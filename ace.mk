@@ -153,13 +153,13 @@ PRODUCT_COPY_FILES += \
     device/htc/ace/system/etc/vold.fstab:system/etc/vold.fstab
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := device/htc/ace/kernel/kernel
+	LOCAL_KERNEL := device/htc/ace/kernel/zImage
 else
 	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel
+    $(LOCAL_KERNEL):zImage
 
 # Kernel Modules
 PRODUCT_COPY_FILES += $(shell \
