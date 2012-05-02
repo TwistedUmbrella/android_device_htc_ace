@@ -52,7 +52,6 @@ BOARD_FLASH_BLOCK_SIZE := 262144
 TARGET_SPECIFIC_HEADER_PATH := device/htc/msm7x30-common/include
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
-TARGET_PREBUILT_KERNEL := device/htc/ace/kernel/kernel
 
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1p1

@@ -152,14 +152,13 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 PRODUCT_COPY_FILES += \
     device/htc/ace/system/etc/vold.fstab:system/etc/vold.fstab
 
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := device/htc/ace/kernel/zImage
-else
-	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
+TARGET_PREBUILT_KERNEL := device/htc/ace/kernel/kernel
 
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+
+# Local Kernel
 PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):zImage
+    $(LOCAL_KERNEL):kernel
 
 # Kernel Modules
 PRODUCT_COPY_FILES += $(shell \
@@ -167,11 +166,10 @@ PRODUCT_COPY_FILES += $(shell \
     | sed -r 's/^\/?(.*\/)([^/ ]+)$$/\1\2:system\/lib\/modules\/\2/' \
     | tr '\n' ' ')
 
+endif
+
 # Kernel Customization
 PRODUCT_COPY_FILES += \
-    device/htc/ace/kernel/sbin/speedtweak.sh:root/sbin/speedtweak.sh \
-    device/htc/ace/kernel/sbin/zram:root/sbin/zram \
-    device/htc/ace/kernel/xbin/wget:system/xbin/wget \
     device/htc/ace/kernel/etc/init.d/100complete:system/etc/init.d/100complete
 
 # common msm7x30 configs
