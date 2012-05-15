@@ -154,7 +154,7 @@ PRODUCT_COPY_FILES += \
 
 TARGET_PREBUILT_KERNEL := device/htc/ace/kernel/kernel
 
-ifeq ($(TARGET_PREBUILT_KERNEL),)
+ifneq ($(TARGET_PREBUILT_KERNEL),)
 
 # Local Kernel
 PRODUCT_COPY_FILES += \
