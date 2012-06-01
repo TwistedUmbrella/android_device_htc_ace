@@ -60,6 +60,10 @@ on boot
     # Bluetooth car dock pin
     chown system system /sys/class/switch/dock/bt_pin
 
+    # Disable all xt_qtaguid checks
+    write /sys/module/xt_qtaguid/parameters/ctrl_write_gid 0
+    write /sys/module/xt_qtaguid/parameters/stats_readall_gid 0 
+
     # for Flip to speaker
     chown radio radio /sys/class/htc_accelerometer/accelerometer/PhoneOnOffFlag
     chown radio radio /sys/class/htc_ecompass/ecompass/PhoneOnOffFlag
