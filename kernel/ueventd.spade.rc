@@ -4,7 +4,7 @@
 #radio
 /dev/radio_feedback     0660    radio       radio
 /dev/smd9               0600    system      system
-/dev/tun                0640    vpn         vpn
+/dev/tun                0660    system      vpn
 
 #sensors
 /dev/akm8975_daemon     0640    compass     system
