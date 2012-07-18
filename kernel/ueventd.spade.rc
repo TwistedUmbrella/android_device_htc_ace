@@ -20,7 +20,6 @@
 /dev/msm_vidc_dec_sec   0660    system      audio
 /dev/msm_vidc_enc       0660    system      audio
 /dev/msm_vidc_reg       0660    system      audio
-/dev/graphics/fb*       0666    system      graphics
 
 #audio
 /dev/htc-acdb           0660    system      audio
